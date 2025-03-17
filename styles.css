@@ -1,0 +1,141 @@
+:root {
+  --logo-blue: #283777;
+  --alt-blue: #3c5883;
+  --logo-white: #fefefe;
+  --yellow: #d8cc34;
+  --green: #74a57f;
+  --light-grey: #efefef;
+  --grey: #8c8c8c;
+  --black: #000000;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tinos", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--alt-blue);
+  background-color: var(--light-grey);
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--logo-white);
+  color: var(--logo-blue);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px var(--grey);
+}
+
+#logo-main {
+  height: 50px;
+  padding-top: 0.3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--logo-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--green);
+}
+
+#language-select {
+  color: var(--logo-blue);
+  border: 1px solid var(--grey);
+  border-radius: 10%;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fi-rs-globe {
+  color: var(--logo-blue);
+  padding-top: 0.15rem;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* News Entries */
+.news-entry {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #34495e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--logo-white);
+  color: var(--alt-blue);
+}
