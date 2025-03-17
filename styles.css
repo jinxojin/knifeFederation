@@ -31,6 +31,13 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 6px var(--grey);
+  position: fixed;
+  width: 100vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 #logo-main {
@@ -85,10 +92,18 @@ section {
 
 section h2 {
   margin-bottom: 20px;
-  color: #2c3e50;
-  border-bottom: 2px solid #2c3e50;
+  color: var(--logo-blue);
+  border-bottom: 2px solid var(--green);
   display: inline-block;
   padding-bottom: 5px;
+}
+
+#home h1 {
+  color: var(--logo-blue);
+}
+
+#home {
+  padding-top: 5rem;
 }
 
 /* News Entries */
@@ -121,15 +136,16 @@ form button {
   margin-top: 15px;
   padding: 10px;
   border: none;
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: var(--yellow);
+  color: var(--logo-blue);
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 form button:hover {
-  background-color: #34495e;
+  background-color: var(--green);
+  color: var(--light-grey);
 }
 
 /* Footer */
