@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector("header");
   let lastScrollY = window.scrollY;
-  const threshold = 50; // Adjust this value (in pixels) to control when the navbar starts hiding
+  const threshold = 50;
 
-  // 1. Navbar Hide/Show on Scroll
+  //Navbar Hide/Show on Scroll
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > threshold && currentScrollY > lastScrollY) {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", handleScroll);
 
-  // 2, 3, & 4:  Navigation Link Handling
+  //Navigation Link Handling
   navbar.addEventListener("click", (event) => {
     if (event.target.tagName === "A") {
       event.preventDefault(); // Prevent default link behavior
@@ -27,17 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetURL = event.target.href;
 
       if (currentURL !== targetURL) {
-        // 2. Different page navigation - redirect as normal
+        //Different page navigation - redirect as normal
         window.location.href = targetURL;
       } else {
-        // 3 & 4. Same page navigation
-        if (window.scrollX !== 0 || window.scrollY !== 0) {
-          // 3. Not at top - scroll to top
-          window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
-        } else {
-          // 4. At top - reload page
-          window.location.reload();
-        }
+        window.scrollX !== 0 || window.scrollY !== 0
+          ? window.scrollTo({ top: 0, behavior: "smooth" })
+          : window.location.reload();
       }
     }
   });
