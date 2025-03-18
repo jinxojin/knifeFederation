@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
           ? window.scrollTo({ top: 0, behavior: "smooth" })
           : window.location.reload();
       }
+    } else if (event.target === navbar.querySelector("img")) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   });
 });

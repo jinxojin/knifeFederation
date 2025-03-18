@@ -71,7 +71,7 @@ nav ul li a:hover {
 #language-select {
   color: var(--logo-blue);
   border: 1px solid var(--grey);
-  border-radius: 10%;
+  border-radius: 12%;
   margin-right: 1rem;
   display: flex;
   justify-content: center;
